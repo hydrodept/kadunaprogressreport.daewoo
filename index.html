@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KQRP PJ LOG-IN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://th.bing.com/th/id/R.32b91377cceef76946e253887f88c928?rik=ecqYfqrW37hx6w&pid=ImgRaw&r=0');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 5%;
+  border-radius: 10%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<script>
+function validateLogin() {
+    var username = document.getElementById('uname').value;
+    var password = document.getElementById('psw').value;
+
+    // Check if username is 'hydro' or 'HYDRO' and password is '1'
+    if ((username.toLowerCase() === 'hydro' || username.toUpperCase() === 'HYDRO') && password === '1') {
+        // Redirect to main.html
+        window.location.href = 'main.html';
+        return false; // Prevent form submission
+    } else {
+        alert('Invalid username or password. Please try again.');
+        return false; // Prevent form submission
+    }
+}
+
+function clearFields() {
+    document.getElementById('uname').value = '';
+    document.getElementById('psw').value = '';
+}
+</script>
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p><img src="https://icon-library.com/images/icon-for-user/icon-for-user-17.jpg"> </p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+<p></p>
+<p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">𝙻𝙾𝙶-𝙸𝙽 </button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+ <img src="https://seeklogo.com/images/D/daewoo-e-c-logo-94E6B2B55E-seeklogo.com.png"> 
+        <p>Created By: Daewoo E & C ( Hydro Department)</p>
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="max-width: 550px;">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1><img src="https://th.bing.com/th/id/R.4cab637eb372a14c903d932f36423b3d?rik=bbeLGUaHvfQtPA&riu=http%3a%2f%2fwww.ikspc.com%2fresources%2fendUser%2fimages%2fmain%2fclient11.png&ehk=XmBEVTcdqbG9hgUQaT%2bROjqxBb05rdFahgs9RMqFTsw%3d&risl=&pid=ImgRaw&r=0">
+</h1>
+    </div>
+    <div class="w3-container">
+      <!-- Modal Content -->
+    <form class="modal-content animate" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return validateLogin()">
+        <div class="imgcontainer">
+          <img src="https://cdn1.iconfinder.com/data/icons/general14/png/256/administrator.png" >
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="clearFields()" class="cancelbtn">Cancel</button>
+       </div>
+      </form>
+    </div>
+  </div>
+</div></body>
+</html>
+
