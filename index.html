@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KADUNA QUICK REPAIR PROJECT</title>
-    <link href="data:image/x-icon;base64,AAABAAEAEBACAAAAAACwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAGBhSAP//AAD//wAA//8AAP//AAD//wAA//8AA
-        P//AAD//wAA//8AAPv/AAD57wAA+OcAAPhjAAD4IQAA+AAAAPgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABhAAAAcYAAAHnAAAB94AAAf/AAAH/wAA" rel="icon" type="image/x-icon">
+    <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBACAAAAAACwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAGBhSAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAPv/AAD57wAA+OcAAPhjAAD4IQAA+AAAAPgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABhAAAAcYAAAHnAAAB94AAAf/AAAH/wAA" type="image/x-icon">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
-        body, h1, h5 {font-family: "Raleway", sans-serif}
-        body, html {height: 100%}
+        body, h1, h5 { font-family: "Raleway", sans-serif; }
+        body, html { height: 100%; }
         .bgimg {
             background-image: url('https://th.bing.com/th/id/R.32b91377cceef76946e253887f88c928?rik=ecqYfqrW37hx6w&pid=ImgRaw&r=0');
             min-height: 100%;
@@ -24,7 +23,6 @@
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
-            display: inline-block;
             border: 1px solid #ccc;
             box-sizing: border-box;
         }
@@ -61,10 +59,6 @@
             padding-top: 16px;
         }
         @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
             .cancelbtn {
                 width: 100%;
             }
@@ -74,10 +68,10 @@
 <body>
 <script>
     function validateLogin() {
-        var username = document.getElementById('uname').value;
-        var password = document.getElementById('psw').value;
+        const username = document.getElementById('uname').value;
+        const password = document.getElementById('psw').value;
 
-        if ((username.toLowerCase() === 'hydro') && password === '123456') {
+        if (username.toLowerCase() === 'hydro' && password === '123456') {
             window.location.href = 'main.html';
             return false;
         } else {
@@ -91,13 +85,13 @@
         document.getElementById('psw').value = '';
     }
 </script>
+
 <div class="bgimg w3-display-container w3-text-white">
     <div class="w3-display-middle w3-jumbo">
         <p><img src="https://th.bing.com/th/id/R.5544bf357d4c2a0af66dd6a7422d78a6?rik=0hd%2bnLmkAWNj8g&riu=http%3a%2f%2fwww.industrialoutpost.com%2fwp-content%2fuploads%2f2016%2f01%2frefinery-1.png&ehk=3PfQafLhrbADkKy6IXb7Lvd1KAVc%2bRVVDW0ibxka%2fAs%3d&risl=&pid=ImgRaw&r=0" alt="User Icon"></p>
     </div>
     <div class="w3-display-topleft w3-container w3-xlarge">
-        <p></p>
-        <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">𝙻𝙾𝙶-𝙸𝙽</button></p>
+        <button type="button" onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">𝙻𝙾𝙶-𝙸𝙽</button>
     </div>
     <div class="w3-display-bottomleft w3-container">
         <img src="https://seeklogo.com/images/D/daewoo-e-c-logo-94E6B2B55E-seeklogo.com.png" alt="Daewoo Logo">
@@ -113,17 +107,17 @@
             <h1><img src="https://th.bing.com/th/id/R.4cab637eb372a14c903d932f36423b3d?rik=bbeLGUaHvfQtPA&riu=http%3a%2f%2fwww.ikspc.com%2fresources%2fendUser%2fimages%2fmain%2fclient11.png&ehk=XmBEVTcdqbG9hgUQaT%2bROjqxBb05rdFahgs9RMqFTsw%3d&risl=&pid=ImgRaw&r=0" alt="Company Logo"></h1>
         </div>
         <div class="w3-container">
-            <form class="modal-content animate" onsubmit="return validateLogin()">
+            <form onsubmit="return validateLogin()">
                 <div class="imgcontainer">
                     <img src="https://cdn1.iconfinder.com/data/icons/general14/png/256/administrator.png" alt="Avatar" class="avatar">
                 </div>
 
                 <div class="container">
                     <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+                    <input type="text" placeholder="Enter Username" name="uname" id="uname" required autocomplete="off">
 
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required autocomplete="off">
 
                     <button type="submit">Login</button>
                     <label>
