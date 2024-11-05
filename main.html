@@ -39,7 +39,9 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="icon-bar w3-white w3-card w3-white" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide w3-large" target="_blank"><i class="fa fa-home" style="font-size:24px;color:orange"></i> KADUNA QUICK REPAIR PROJECT PROGRESS REPORT</a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide w3-large" target="_blank">
+      <i class="fa fa-home" style="font-size:24px;color:orange"></i> KADUNA QUICK REPAIR PROJECT PROGRESS REPORT
+    </a>
     <div class="w3-right w3-hide-small">
       <a href="cms.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-file-text-o" style="color:orange"></i> SYSTEM TURN OVER CMS</a>
       <a href="hydrosect.html" class="w3-bar-item w3-button" target="_blank"><i class="fa fa-bar-chart-o" style="color:orange"></i> HYDRO DAILY TEST STATUS</a>
@@ -60,27 +62,22 @@ body, html {
     <span class="w3-large">“Hard work pays off if you’re patient enough to see it through.” – Michael Chandler</span>
     <p><a href="weldjoint.html" class="w3-button w3-text-black w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">OTHER DATA SUMMARY</a></p>
   </div> 
-
-<div id="chatbot1">
-
-       <script 
-         async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'>
-         
-         </script>
-<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cm34mg9lw00062ffgfmj1ib4b'></zapier-interfaces-chatbot-embed>
-  
-</div>
-
-<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cm34mg9lw00062ffgfmj1ib4b'></zapier-interfaces-chatbot-embed>
-
-    <div class="w3-display-bottomleft w3-text-grey w3-small" style="padding:24px 48px">
-  <img src="https://seeklogo.com/images/D/daewoo-e-c-logo-94E6B2B55E-seeklogo.com.png"> 
- <p>𝙲𝚛𝚎𝚊𝚝𝚎𝚍 𝙱𝚢: 𝙳𝚊𝚎𝚠𝚘𝚘 𝙴 &amp; 𝙲 (𝙷𝚢𝚍𝚛𝚘 𝙳𝚎𝚙𝚊𝚛𝚝𝚖𝚎𝚗𝚝)</p>
- <p>𝙳𝚊𝚝𝚎 𝙲𝚛𝚎𝚊𝚝𝚎𝚍: 𝙼𝚊𝚢 𝟽, 𝟸𝟶𝟸𝟺 @𝚎𝚓𝚋𝚘𝟾𝟼</p>
-</div>
 </header>
-  <script>
+
+<!-- Chatbot Embed -->
+<div id="chatbot-container">
+  <script defer type="module" src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"></script>
+  <zapier-interfaces-chatbot-embed is-popup="true" chatbot-id="cm34mg9lw00062ffgfmj1ib4b"></zapier-interfaces-chatbot-embed>
+</div>
+
+<!-- Footer -->
+<div class="w3-display-bottomleft w3-text-grey w3-small" style="padding:24px 48px">
+  <img src="https://seeklogo.com/images/D/daewoo-e-c-logo-94E6B2B55E-seeklogo.com.png"> 
+  <p>Created By: Daewoo E & C (Hydro Department)</p>
+  <p>Date Created: May 7, 2024 @ejbo86</p>
+</div>
+
+<script>
   function w3_open() {
     var x = document.getElementById("myNavbar");
     if (x.className.indexOf("w3-show") == -1) {
