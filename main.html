@@ -63,43 +63,34 @@ body, html {
 
 
 
-  <div class="w3-display-bottomleft w3-text-grey w3-small" style="padding:24px 48px">
-    <img src="https://seeklogo.com/images/D/daewoo-e-c-logo-94E6B2B55E-seeklogo.com.png"> 
-    <p>Created By: Daewoo E & C (Hydro Department)</p>
-    <p>Date Created: May 7, 2024</p>
-  </div>
+ <div id="chatbot1">
+    <script
+        chatbot_id="672645cfb72b18e6d290b905"
+        src="https://app.thinkstack.ai/bot/thinkstackai-loader.min.js">
+    </script>
+</div>
+<div id="chatbot2">
+    <script
+        chatbot_id="6725f7f3b72b18e6d290a0b6"
+        src="https://app.thinkstack.ai/bot/thinkstackai-loader.min.js">
+    </script>
+</div>
+
+    <div class="w3-display-bottomleft w3-text-grey w3-small" style="padding:24px 48px">
+  <img src="https://seeklogo.com/images/D/daewoo-e-c-logo-94E6B2B55E-seeklogo.com.png"> 
+ <p>𝙲𝚛𝚎𝚊𝚝𝚎𝚍 𝙱𝚢: 𝙳𝚊𝚎𝚠𝚘𝚘 𝙴 &amp; 𝙲 (𝙷𝚢𝚍𝚛𝚘 𝙳𝚎𝚙𝚊𝚛𝚝𝚖𝚎𝚗𝚝)</p>
+ <p>𝙳𝚊𝚝𝚎 𝙲𝚛𝚎𝚊𝚝𝚎𝚍: 𝙼𝚊𝚢 𝟽, 𝟸𝟶𝟸𝟺 @𝚎𝚓𝚋𝚘𝟾𝟼</p>
+</div>
 </header>
-
-<script>
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  <script>
+  function w3_open() {
+    var x = document.getElementById("myNavbar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
-}
-
-function w3_open() {
-  var x = document.getElementById("myNavbar");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
 </script>
-
 </body>
 </html>
