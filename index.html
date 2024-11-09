@@ -66,14 +66,14 @@
     </style>
 </head>
 <body>
- 
+
 <script>
     function validateLogin() {
         const username = document.getElementById('uname').value;
         const password = document.getElementById('psw').value;
 
         if (username.toLowerCase() === 'hydro' && password === '123456') {
-            window.location.href = 'main.html';
+            window.location.href = 'main.html'; // Redirect to main page
             return false;
         } else {
             alert('Invalid username or password. Please try again.');
@@ -85,7 +85,7 @@
         document.getElementById('uname').value = '';
         document.getElementById('psw').value = '';
     }
-
+</script>
 
 <div class="bgimg w3-display-container w3-text-white">
     <div class="w3-display-middle w3-jumbo">
@@ -101,6 +101,7 @@
     </div>
 </div>
 
+<!-- Modal -->
 <div id="menu" class="w3-modal">
     <div class="w3-modal-content w3-animate-zoom" style="max-width: 550px;">
         <div class="w3-container w3-black w3-display-container">
@@ -133,5 +134,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
